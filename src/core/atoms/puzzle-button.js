@@ -8,10 +8,6 @@ class PuzzleButton extends HTMLElement {
 
         this.shadowRoot.innerHTML = `
             <style>
-                :host {
-                    display: inline-flex;
-                }
-
                 :host([block]) button {
                     width: 100%;
                 }
@@ -30,7 +26,6 @@ class PuzzleButton extends HTMLElement {
                     background: #e0e0e0;
                     color: #9e9e9e;
                     cursor: not-allowed;
-                    border-color: #cfd8dc;
                 }
 
                 button {
@@ -44,7 +39,6 @@ class PuzzleButton extends HTMLElement {
                     border-radius: 10px;
                     font-size: 14px;
                     font-family: inherit;
-                    width: 100%;
                 }
 
                 button:hover {

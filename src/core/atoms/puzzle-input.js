@@ -24,9 +24,7 @@ class PuzzleInput extends HTMLElement {
                     color: #757575;
                 }
             </style>
-            <div>
-                <input type="text" />
-            </div>
+            <input type="text">
         `;
 
         this.inputElement = this.shadowRoot.querySelector('input');
