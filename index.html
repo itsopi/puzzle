@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puzzle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <style>
         *,
         *::before,
@@ -23,11 +26,44 @@
 
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Nunito', sans-serif;
+            padding: 2rem;
+            background: #eceff1;
         }
     </style>
 </head>
 <body>
+    <puzzle-layout>
+        <div style="background: #fff; padding: 2rem; width: 25rem; border-radius: 1rem;">
+            <puzzle-layout>
+                <puzzle-field>
+                    Email
+                    <puzzle-input type="email" placeholder="itsopi@gmail.com"></puzzle-input>
+                </puzzle-field>
+                <puzzle-field>
+                    Password
+                    <puzzle-input type="password"></puzzle-input>
+                </puzzle-field>
+                <puzzle-button block>Save</puzzle-button>
+            </puzzle-layout>
+        </div>
+        <div style="background: #fff; padding: 2rem; width: 25rem; border-radius: 1rem;">
+            <puzzle-layout>
+                <puzzle-field>
+                    Email
+                    <puzzle-input type="email" placeholder="itsopi@gmail.com"></puzzle-input>
+                </puzzle-field>
+                <puzzle-field>
+                    Password
+                    <puzzle-input type="password"></puzzle-input>
+                </puzzle-field>
+                <puzzle-buttons stretch>
+                    <puzzle-button variant="secondary">Cancel</puzzle-button>
+                    <puzzle-button>Save</puzzle-button>
+                </puzzle-buttons>
+            </puzzle-layout>
+        </div>
+    </puzzle-layout>
     <script type="module" src="main.js"></script>
 </body>
 </html>
