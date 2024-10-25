@@ -8,17 +8,13 @@ class PuzzleInput extends HTMLElement {
 
         this.shadowRoot.innerHTML = `
             <style>
-                :host {
-                    font-family: inherit;
-                }
-
                 input {
                     width: 100%;
                     border: 1px solid #cfd8dc;
                     box-sizing: border-box;
                     height: 40px;
                     border-radius: 10px;
-                    padding: 0 1rem;
+                    padding: 0 16px;
                     outline: none;
                     font-family: inherit;
                 }

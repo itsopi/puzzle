@@ -11,7 +11,7 @@ class PuzzleButtons extends HTMLElement {
                 :host {
                     display: flex;
                     justify-content: flex-end;
-                    gap: 0.5rem;
+                    gap: 8px;
                 }
 
                 :host([align="left"]) {

@@ -11,7 +11,7 @@ class PuzzleLayout extends HTMLElement {
                 :host {
                     display: flex;
                     flex-direction: column;
-                    gap: 1rem;
+                    gap: 16px;
                 }
 
                 :host([direction="row"]) {

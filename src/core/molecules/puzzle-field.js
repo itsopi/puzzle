@@ -11,7 +11,7 @@ class PuzzleField extends HTMLElement {
                 :host {
                     display: flex;
                     flex-direction: column;
-                    gap: .5rem;
+                    gap: 8px;
                     font-size: 14px;
                 }
             </style>

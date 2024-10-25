@@ -9,7 +9,6 @@ class PuzzleButton extends HTMLElement {
         this.shadowRoot.innerHTML = `
             <style>
                 :host {
-                    font-family: inherit;
                     display: inline-flex;
                 }
 
@@ -38,7 +37,7 @@ class PuzzleButton extends HTMLElement {
                     background: #000;
                     border: 0;
                     border-radius: 3px;
-                    padding: 0rem 1rem;
+                    padding: 0 16px;
                     cursor: pointer;
                     color: #fff;
                     height: 40px;
@@ -63,7 +62,7 @@ class PuzzleButton extends HTMLElement {
             </button>
         `;
 
-        this.button = this.shadowRoot.querySelector('button');
+        this.buttonElement = this.shadowRoot.querySelector('button');
     }
 
     static get observedAttributes() {
@@ -72,7 +71,7 @@ class PuzzleButton extends HTMLElement {
 
     attributeChangedCallback(name, oldValue, newValue) {
         if (name === 'disabled') {
-            this.button.disabled = newValue !== null;
+            this.buttonElement.disabled = newValue !== null;
         }
     }
 }
