@@ -1,4 +1,4 @@
-import { getColorFromString, getContrastingColor } from '../..//utils/color-utils.js';
+import { getColorFromString, getContrastingColor } from '../../utils/color-utils.js';
 
 class PuzzleAvatar extends HTMLElement {
     constructor() {
