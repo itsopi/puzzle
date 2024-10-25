@@ -8,6 +8,10 @@ class PuzzleButton extends HTMLElement {
 
         this.shadowRoot.innerHTML = `
             <style>
+                :host {
+                    display: inline-flex;
+                }
+
                 :host([block]) button {
                     width: 100%;
                 }
