@@ -8,14 +8,6 @@ class PuzzleButton extends HTMLElement {
 
         this.shadowRoot.innerHTML = `
             <style>
-                :host {
-                    display: inline-flex;
-                }
-
-                :host([block]) button {
-                    width: 100%;
-                }
-
                 :host([variant="secondary"]) button {
                     background: #fff;
                     color: #000;
@@ -43,6 +35,7 @@ class PuzzleButton extends HTMLElement {
                     border-radius: 10px;
                     font-size: 14px;
                     font-family: inherit;
+                    width: 100%;
                 }
 
                 button:hover {
@@ -64,7 +57,7 @@ class PuzzleButton extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ['disabled', 'variant', 'block'];
+        return ['disabled', 'variant'];
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
