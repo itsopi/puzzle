@@ -7,11 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <style>
         *,
         *::before,
         *::after {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         html,
@@ -27,68 +31,72 @@
         body {
             margin: 0;
             font-family: 'Nunito', sans-serif;
+            font-size: .875rem;
+        }
+
+        .wrapper {
+            height: 100%;
+            width: 100%;
+            background-color: #fff;
+            display: flex;
+        }
+
+        .navigation {
+            border-right: 1px solid #cfd8dc;
+            width: 15%;
             padding: 2rem;
-            background: #eceff1;
+        }
+
+        .navigation .items .item {
+            cursor: pointer;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sidebar {
+            border-left: 1px solid #cfd8dc;
+            width: 25%;
+            padding: 2rem;
+            overflow: auto;
+        }
+
+        .sidebar .attributes {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar .attributes .attribute {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .sidebar .attributes .attribute .name {
+            font-size: 1rem;
+            font-weight: bold;
+            font-family: monospace;
+        }
+
+        .sidebar .attributes .attribute .examples {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
         }
     </style>
 </head>
 <body>
-    <puzzle-layout>
-        <puzzle-layout style="width: 20rem;">
-            <puzzle-select>Status</puzzle-select>
-            <puzzle-select>Status Status Status Status Status Status Status Status Status</puzzle-select>
-            <puzzle-select disabled>Status</puzzle-select>
-        </puzzle-layout>
-        <puzzle-layout style="width: 20rem;">
-            <puzzle-button>Button</puzzle-button>
-            <puzzle-button disabled>Button</puzzle-button>
-            <puzzle-button variant="secondary">Button</puzzle-button>
-            <puzzle-button variant="secondary" disabled>Button</puzzle-button>
-            <puzzle-buttons>
-                <puzzle-button variant="secondary">Cancel</puzzle-button>
-                <puzzle-button>Save</puzzle-button>
-            </puzzle-buttons>
-            <puzzle-buttons stretch>
-                <puzzle-button variant="secondary">Cancel</puzzle-button>
-                <puzzle-button>Save</puzzle-button>
-            </puzzle-buttons>
-        </puzzle-layout>
-        <div style="background: #fff; padding: 2rem; width: 25rem; border-radius: 1rem;">
-            <puzzle-layout>
-                <puzzle-form>
-                    <puzzle-label truncate>EmailEmailEmailEmailEmailEmailEmailEmailEmailEmailEmailEmailEmailEmailEmailEmail</puzzle-label>
-                    <puzzle-input type="email" placeholder="itsopi@gmail.com" height="80px"></puzzle-input>
-                </puzzle-form>
-                <puzzle-form>
-                    <puzzle-label>Password</puzzle-label>
-                    <puzzle-input type="password"></puzzle-input>
-                </puzzle-form>
-                <puzzle-button height="100px">Save</puzzle-button>
-            </puzzle-layout>
-        </div>
-        <div style="background: #fff; padding: 2rem; width: 25rem; border-radius: 1rem;">
-            <puzzle-layout>
-                <puzzle-form>
-                    <puzzle-label>EmailEmailEmailEmailEmailEmailEmailEmailEmailEmailEmailEmailEmailEmailEmailEmail</puzzle-label>
-                    <puzzle-input type="email" placeholder="itsopi@gmail.com"></puzzle-input>
-                </puzzle-form>
-                <puzzle-form>
-                    <puzzle-label>Password</puzzle-label>
-                    <puzzle-input type="password"></puzzle-input>
-                </puzzle-form>
-                <puzzle-buttons stretch>
-                    <puzzle-button variant="secondary">Cancel Cancel Cancel Cancel Cancel Cancel Cancel Cancel Cancel Cancel</puzzle-button>
-                    <puzzle-button>Save</puzzle-button>
-                </puzzle-buttons>
-            </puzzle-layout>
-        </div>
-        <puzzle-avatar src="/assets/images/uifaces-abstract-image.jpg"></puzzle-avatar>
-        <puzzle-avatar initials="HI"></puzzle-avatar>
-        <puzzle-avatar src="/assets/images/uifaces-abstract-image.jpg" size="120px" shape="square"></puzzle-avatar>
-        <puzzle-avatar initials="Hristo Ivanov" size="80px" shape="square"></puzzle-avatar>
-        <puzzle-avatar initials="PK" shape="square"></puzzle-avatar>
-        <puzzle-avatar initials="PK" shape="square" color="#f44336"></puzzle-avatar>
-    </puzzle-layout>
-    <script type="module" src="lib/main.js"></script>
+    <div class="wrapper">
+        <div class="navigation js-navigation"></div>
+        <div class="container js-container"></div>
+        <div class="sidebar js-sidebar"></div>
+    </div>
+    <script src="./dist/puzzle.min.umd.js"></script>
+    <script type="module" src="./docs/main.js"></script>
 </body>
 </html>

@@ -1,7 +1,6 @@
 import { resolve } from 'path';
-import { defineConfig } from 'vite';
 
-export default defineConfig({
+export default {
     build: {
         lib: {
             entry: resolve(__dirname, './lib/main.js'),
@@ -9,4 +8,4 @@ export default defineConfig({
             fileName: (format) => `puzzle.min.${format}.js`,
         }
     },
-});
+};
