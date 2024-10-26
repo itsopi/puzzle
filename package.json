@@ -10,6 +10,8 @@
     "author": "Hristo ivanov",
     "license": "MIT",
     "devDependencies": {
+        "autoprefixer": "^10.4.20",
+        "cssnano": "^7.0.6",
         "vite": "^5.4.10"
     }
 }

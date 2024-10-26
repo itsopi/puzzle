@@ -1,12 +1,13 @@
 // Atoms
-import { PuzzleButton } from './src/core/atoms/puzzle-button.js';
-import { PuzzleInput } from './src/core/atoms/puzzle-input.js';
-import { PuzzleAvatar } from './src/core/atoms/puzzle-avatar.js';
-import { PuzzleSelect } from './src/core/atoms/puzzle-select.js';
+import { PuzzleButton } from './lib/atoms/button/button.js';
+import { PuzzleInput } from './lib/atoms/input/input.js';
+import { PuzzleAvatar } from './lib/atoms/avatar/avatar.js';
+import { PuzzleSelect } from './lib/atoms/select/select.js';
+import { PuzzleLabel } from './lib/atoms/label/label.js';
 
 // Molecules
-import { PuzzleButtons } from './src/core/molecules/puzzle-buttons.js';
-import { PuzzleForm } from './src/core/molecules/puzzle-form.js';
+import { PuzzleButtons } from './lib/molecules/buttons/buttons.js';
+import { PuzzleForm } from './lib/molecules/form/form.js';
 
 // Organisms
-import { PuzzleLayout } from './src/core/organisms/puzzle-layout.js';
+import { PuzzleLayout } from './lib/organisms/layout/layout.js';

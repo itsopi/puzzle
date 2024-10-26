@@ -1,0 +1,25 @@
+:host {
+    --height: 40px;
+}
+
+input {
+    width: 100%;
+    border: 1px solid #cfd8dc;
+    box-sizing: border-box;
+    height: var(--height);
+    border-radius: calc(var(--height) / 4);
+    padding: 0 calc(var(--height) / 2);
+    outline: none;
+    font-family: inherit;
+    font-size: calc(var(--height) * 0.35);
+}
+
+input:placeholder {
+    font: inherit;
+    color: #757575;
+}
+
+input:focus {
+    border-color: #000;
+    outline: 1px solid #000;
+}

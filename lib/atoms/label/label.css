@@ -1,0 +1,10 @@
+:host {
+    word-break: break-word;
+    font-size: 14px;
+}
+
+:host([truncate]) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

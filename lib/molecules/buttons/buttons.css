@@ -1,0 +1,17 @@
+:host {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+:host([align="left"]) {
+    justify-content: flex-start;
+}
+
+:host([align="center"]) {
+    justify-content: center;
+}
+
+:host([stretch]) ::slotted(puzzle-button) {
+    flex: 1;
+}
