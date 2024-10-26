@@ -6,7 +6,7 @@ import { PuzzleSelect } from './src/core/atoms/puzzle-select.js';
 
 // Molecules
 import { PuzzleButtons } from './src/core/molecules/puzzle-buttons.js';
-import { PuzzleField } from './src/core/molecules/puzzle-field.js';
+import { PuzzleForm } from './src/core/molecules/puzzle-form.js';
 
 // Organisms
 import { PuzzleLayout } from './src/core/organisms/puzzle-layout.js';

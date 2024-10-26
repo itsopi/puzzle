@@ -1,4 +1,4 @@
-class PuzzleField extends HTMLElement {
+class PuzzleForm extends HTMLElement {
     constructor() {
         super();
 
@@ -20,6 +20,6 @@ class PuzzleField extends HTMLElement {
     }
 }
 
-customElements.define('puzzle-field', PuzzleField);
+customElements.define('puzzle-form', PuzzleForm);
 
-export { PuzzleField };
+export { PuzzleForm };
